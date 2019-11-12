@@ -7,11 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4008C969237A062800A27CAD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4008C968237A062800A27CAD /* main.c */; };
+		4008C96F237A07B300A27CAD /* libmagic.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; };
+		4008C970237A07B300A27CAD /* libmagic.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4008C972237A57B800A27CAD /* libmagic.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; };
+		4008C973237A57B800A27CAD /* libmagic.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		407A8A222375348700E30FC2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 407A8A212375348700E30FC2 /* main.cpp */; };
 		407A8A262375373F00E30FC2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 407A8A0A2374F32700E30FC2 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4008C964237A062800A27CAD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		4008C971237A07B300A27CAD /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4008C970237A07B300A27CAD /* libmagic.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4008C974237A57B800A27CAD /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4008C973237A57B800A27CAD /* libmagic.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407A8A052374F32700E30FC2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,13 +69,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4008C966237A062800A27CAD /* test_libmagic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_libmagic; sourceTree = BUILT_PRODUCTS_DIR; };
+		4008C968237A062800A27CAD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4008C96E237A07B300A27CAD /* libmagic.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmagic.1.dylib; path = ../../../../../../../usr/local/Cellar/libmagic/5.37/lib/libmagic.1.dylib; sourceTree = "<group>"; };
 		407A8A072374F32700E30FC2 /* Code_Labrary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Code_Labrary; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A8A0A2374F32700E30FC2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		407A8A1F2375348700E30FC2 /* Test_Func */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test_Func; sourceTree = BUILT_PRODUCTS_DIR; };
-		407A8A212375348700E30FC2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		407A8A212375348700E30FC2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4008C963237A062800A27CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4008C96F237A07B300A27CAD /* libmagic.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407A8A042374F32700E30FC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,18 +98,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4008C972237A57B800A27CAD /* libmagic.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4008C967237A062800A27CAD /* test_libmagic */ = {
+			isa = PBXGroup;
+			children = (
+				4008C968237A062800A27CAD /* main.c */,
+			);
+			path = test_libmagic;
+			sourceTree = "<group>";
+		};
+		4008C96D237A07B300A27CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4008C96E237A07B300A27CAD /* libmagic.1.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		407A89FE2374F32700E30FC2 = {
 			isa = PBXGroup;
 			children = (
 				407A8A092374F32700E30FC2 /* Scan_Directory */,
 				407A8A202375348700E30FC2 /* Test_Func */,
+				4008C967237A062800A27CAD /* test_libmagic */,
 				407A8A082374F32700E30FC2 /* Products */,
+				4008C96D237A07B300A27CAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +137,7 @@
 			children = (
 				407A8A072374F32700E30FC2 /* Code_Labrary */,
 				407A8A1F2375348700E30FC2 /* Test_Func */,
+				4008C966237A062800A27CAD /* test_libmagic */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +161,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4008C965237A062800A27CAD /* test_libmagic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4008C96A237A062800A27CAD /* Build configuration list for PBXNativeTarget "test_libmagic" */;
+			buildPhases = (
+				4008C962237A062800A27CAD /* Sources */,
+				4008C963237A062800A27CAD /* Frameworks */,
+				4008C964237A062800A27CAD /* CopyFiles */,
+				4008C971237A07B300A27CAD /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test_libmagic;
+			productName = test_libmagic;
+			productReference = 4008C966237A062800A27CAD /* test_libmagic */;
+			productType = "com.apple.product-type.tool";
+		};
 		407A8A062374F32700E30FC2 /* Code_Labrary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 407A8A0E2374F32700E30FC2 /* Build configuration list for PBXNativeTarget "Code_Labrary" */;
@@ -118,6 +203,7 @@
 				407A8A1B2375348700E30FC2 /* Sources */,
 				407A8A1C2375348700E30FC2 /* Frameworks */,
 				407A8A1D2375348700E30FC2 /* CopyFiles */,
+				4008C974237A57B800A27CAD /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -137,6 +223,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = Ayaya;
 				TargetAttributes = {
+					4008C965237A062800A27CAD = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					407A8A062374F32700E30FC2 = {
 						CreatedOnToolsVersion = 11.2;
 					};
@@ -160,11 +249,20 @@
 			targets = (
 				407A8A062374F32700E30FC2 /* Code_Labrary */,
 				407A8A1E2375348700E30FC2 /* Test_Func */,
+				4008C965237A062800A27CAD /* test_libmagic */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4008C962237A062800A27CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4008C969237A062800A27CAD /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407A8A032374F32700E30FC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +282,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		4008C96B237A062800A27CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libmagic/5.37/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4008C96C237A062800A27CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libmagic/5.37/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		407A8A0C2374F32700E30FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -305,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -313,6 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libmagic/5.37/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -321,6 +449,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libmagic/5.37/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -328,6 +460,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4008C96A237A062800A27CAD /* Build configuration list for PBXNativeTarget "test_libmagic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4008C96B237A062800A27CAD /* Debug */,
+				4008C96C237A062800A27CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		407A8A022374F32700E30FC2 /* Build configuration list for PBXProject "Code_Labrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
