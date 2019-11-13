@@ -48,6 +48,15 @@
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4008C977237BBE9F00A27CAD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		407A8A052374F32700E30FC2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,6 +81,7 @@
 		4008C966237A062800A27CAD /* test_libmagic */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_libmagic; sourceTree = BUILT_PRODUCTS_DIR; };
 		4008C968237A062800A27CAD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		4008C96E237A07B300A27CAD /* libmagic.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmagic.1.dylib; path = ../../../../../../../usr/local/Cellar/libmagic/5.37/lib/libmagic.1.dylib; sourceTree = "<group>"; };
+		4008C979237BBE9F00A27CAD /* Test_Func_Cplusplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test_Func_Cplusplus; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A8A072374F32700E30FC2 /* Code_Labrary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Code_Labrary; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A8A0A2374F32700E30FC2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		407A8A1F2375348700E30FC2 /* Test_Func */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test_Func; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +94,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4008C96F237A07B300A27CAD /* libmagic.1.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4008C976237BBE9F00A27CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +155,7 @@
 				407A8A072374F32700E30FC2 /* Code_Labrary */,
 				407A8A1F2375348700E30FC2 /* Test_Func */,
 				4008C966237A062800A27CAD /* test_libmagic */,
+				4008C979237BBE9F00A27CAD /* Test_Func_Cplusplus */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,6 +195,23 @@
 			name = test_libmagic;
 			productName = test_libmagic;
 			productReference = 4008C966237A062800A27CAD /* test_libmagic */;
+			productType = "com.apple.product-type.tool";
+		};
+		4008C978237BBE9F00A27CAD /* Test_Func_Cplusplus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4008C97D237BBE9F00A27CAD /* Build configuration list for PBXNativeTarget "Test_Func_Cplusplus" */;
+			buildPhases = (
+				4008C975237BBE9F00A27CAD /* Sources */,
+				4008C976237BBE9F00A27CAD /* Frameworks */,
+				4008C977237BBE9F00A27CAD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Test_Func_Cplusplus;
+			productName = Test_Func_Cplusplus;
+			productReference = 4008C979237BBE9F00A27CAD /* Test_Func_Cplusplus */;
 			productType = "com.apple.product-type.tool";
 		};
 		407A8A062374F32700E30FC2 /* Code_Labrary */ = {
@@ -226,6 +261,9 @@
 					4008C965237A062800A27CAD = {
 						CreatedOnToolsVersion = 11.2;
 					};
+					4008C978237BBE9F00A27CAD = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					407A8A062374F32700E30FC2 = {
 						CreatedOnToolsVersion = 11.2;
 					};
@@ -250,6 +288,7 @@
 				407A8A062374F32700E30FC2 /* Code_Labrary */,
 				407A8A1E2375348700E30FC2 /* Test_Func */,
 				4008C965237A062800A27CAD /* test_libmagic */,
+				4008C978237BBE9F00A27CAD /* Test_Func_Cplusplus */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4008C969237A062800A27CAD /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4008C975237BBE9F00A27CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +348,22 @@
 					"$(inherited)",
 					/usr/local/Cellar/libmagic/5.37/lib,
 				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4008C97E237BBE9F00A27CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4008C97F237BBE9F00A27CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -465,6 +527,15 @@
 			buildConfigurations = (
 				4008C96B237A062800A27CAD /* Debug */,
 				4008C96C237A062800A27CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4008C97D237BBE9F00A27CAD /* Build configuration list for PBXNativeTarget "Test_Func_Cplusplus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4008C97E237BBE9F00A27CAD /* Debug */,
+				4008C97F237BBE9F00A27CAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

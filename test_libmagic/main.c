@@ -8,8 +8,16 @@
 #include </usr/local/Cellar/libmagic/5.37/include/magic.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <filesystem>
+
+using namespace std;
+using namespace fs = std::__fs::filesystem;
 
 char path[] = "/Users/Stori/Downloads/Pock-master.zip";
+fs::path image_path= "/Users/Stori/Downloads/image/jpeg/imageIMAGE 2019-06-30 16/09/22.jpg";
 
 //#include <sys/tyoes.h>
 
@@ -21,6 +29,7 @@ int main(int argc, const char * argv[]) {
         printf("%d\n", strcmp("application/zip", "image/jpeg"));
     }
     printf("magic output: '%s'\n",magic_file(magic,path));
+    l
 
     return 0;
 }
