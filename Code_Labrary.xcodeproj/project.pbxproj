@@ -12,6 +12,9 @@
 		4008C970237A07B300A27CAD /* libmagic.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		4008C972237A57B800A27CAD /* libmagic.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; };
 		4008C973237A57B800A27CAD /* libmagic.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		4042D3E0237BCADA00EAA324 /* Test_Func_Cplusplus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4042D3DE237BCADA00EAA324 /* Test_Func_Cplusplus.cpp */; };
+		4042D3E1237BCB7E00EAA324 /* libmagic.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; };
+		4042D3E2237BCB7E00EAA324 /* libmagic.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 4008C96E237A07B300A27CAD /* libmagic.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		407A8A222375348700E30FC2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 407A8A212375348700E30FC2 /* main.cpp */; };
 		407A8A262375373F00E30FC2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 407A8A0A2374F32700E30FC2 /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -57,6 +60,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		4042D3E3237BCB7E00EAA324 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4042D3E2237BCB7E00EAA324 /* libmagic.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		407A8A052374F32700E30FC2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,6 +96,8 @@
 		4008C968237A062800A27CAD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		4008C96E237A07B300A27CAD /* libmagic.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmagic.1.dylib; path = ../../../../../../../usr/local/Cellar/libmagic/5.37/lib/libmagic.1.dylib; sourceTree = "<group>"; };
 		4008C979237BBE9F00A27CAD /* Test_Func_Cplusplus */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test_Func_Cplusplus; sourceTree = BUILT_PRODUCTS_DIR; };
+		4042D3DE237BCADA00EAA324 /* Test_Func_Cplusplus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test_Func_Cplusplus.cpp; sourceTree = "<group>"; };
+		4042D3DF237BCADA00EAA324 /* Test_Func_Cplusplus.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Test_Func_Cplusplus.hpp; sourceTree = "<group>"; };
 		407A8A072374F32700E30FC2 /* Code_Labrary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Code_Labrary; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A8A0A2374F32700E30FC2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		407A8A1F2375348700E30FC2 /* Test_Func */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Test_Func; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4042D3E1237BCB7E00EAA324 /* libmagic.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +155,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4042D3DD237BCAB600EAA324 /* Test_Func_Cplusplus */ = {
+			isa = PBXGroup;
+			children = (
+				4042D3DE237BCADA00EAA324 /* Test_Func_Cplusplus.cpp */,
+				4042D3DF237BCADA00EAA324 /* Test_Func_Cplusplus.hpp */,
+			);
+			path = Test_Func_Cplusplus;
+			sourceTree = "<group>";
+		};
 		407A89FE2374F32700E30FC2 = {
 			isa = PBXGroup;
 			children = (
+				4042D3DD237BCAB600EAA324 /* Test_Func_Cplusplus */,
 				407A8A092374F32700E30FC2 /* Scan_Directory */,
 				407A8A202375348700E30FC2 /* Test_Func */,
 				4008C967237A062800A27CAD /* test_libmagic */,
@@ -204,6 +231,7 @@
 				4008C975237BBE9F00A27CAD /* Sources */,
 				4008C976237BBE9F00A27CAD /* Frameworks */,
 				4008C977237BBE9F00A27CAD /* CopyFiles */,
+				4042D3E3237BCB7E00EAA324 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -306,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4042D3E0237BCADA00EAA324 /* Test_Func_Cplusplus.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libmagic/5.37/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -364,6 +397,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libmagic/5.37/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
