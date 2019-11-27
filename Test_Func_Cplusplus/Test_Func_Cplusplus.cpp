@@ -18,6 +18,7 @@
 #include <filesystem>
 #include <ctime>
 #include <stdarg.h>
+#include <ctime>
 
 using namespace std;
 namespace fs = std::__fs::filesystem;
@@ -25,17 +26,18 @@ namespace fs = std::__fs::filesystem;
 fs::path root[1] = {"/Users/Stori/Downloads/image"};
 fs::path jpeg_image_path = "/Users/Stori/Downloads/image/jpeg";
 fs::path png_image_path = "/Users/Stori/Downloads/image/png";
-fs::path image_path= "/Users/Stori/Downloads/image/jpeg/imageIMAGE\ 2019-06-30\ 16:09:22.jpg";
+fs::path path= "/Users/Stori/Downloads/image/jpeg/";
 
 void f(char* fmt, ...);
 
 int main(int argc, const char * argv[]) {
     
-    struct stat status;
-    lstat(image_path.c_str(), &status);
-    
-    f("%c %s %d %f", 'A', "BBBBB", 100, 1.111);
-    cout << sizeof(int) << endl;
+    int *p;
+    if (p == NULL)
+        cout << "NULL" << endl;
+    else
+        cout << "Not NULL" << endl;
+    return 0;
     
 }
 
