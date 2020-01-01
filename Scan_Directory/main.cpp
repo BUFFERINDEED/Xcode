@@ -11,7 +11,7 @@
 #include <sys/dir.h>
 #include <sys/stat.h>
 using namespace std;
-
+namespace fs = std::__fs::filesystem;
 
 bool isDir(const char* path);
 void myFind(const string& filename, const string& tofind);
@@ -20,7 +20,18 @@ void findInDir(const char *path, const string& tofind, int recursive);
  
 int main()
 {
-    findInDir("/Users/Stori/Documents/GitHub/Code/C/Xcode", "5");
+    fs::path path = "/Users/Stori/bar.txt/";
+    cout << fs::current_path() << endl;
+    cout << fs::current_path().root_name() << endl;
+    cout << fs::current_path().root_directory() << endl;
+    cout << fs::current_path().root_path() << endl;
+    cout << fs::current_path().relative_path() << endl;
+    cout << fs::current_path().parent_path() << endl;
+    cout << fs::current_path().filename() << endl;
+    cout << fs::current_path().stem() << endl;
+    cout << fs::current_path().extension() << endl;
+    
+    // findInDir("/Users/Stori/Documents/GitHub/Code/C/Xcode", "5");
     return 0;
 }
  
